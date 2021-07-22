@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <title>Code game</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/favicon.png">
+    <!-- Linking fonts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=STIX+Two+Math&display=swap" rel="stylesheet">
+
+    <body>
+        <!-- Welcome page -->
+        <section id='menu'>
+            <h1>Code guessing game</h1>
+            <h4>In the midst of this game, you must carefully observe the image shown to you and do your very best to understand which coding language the code shown amidst that image belongs to.</h4>
+            <button class='yeah' id="play_btn">PLAY</button>
+        </section>
+        <!-- Game area -->
+        <section style="display: none" id="game">
+            <img id="code" src="">
+            <h3 style="color: #d9b08c ; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">Guess the code !</h3>
+            <div id='flexy'>
+                <div id='divOne'></div>
+                <div id='divTwo'></div>
+            </div>
+        </section>
+        <section style='display: none' id="end">
+            <p id="winMsg"></p>
+            <button class='yeah' onclick="window.location.reload()">Play again</button>
+        </section>
+    </body>
+    <script src='javascript/app.js'></script>
+</html>
