@@ -1,7 +1,7 @@
 // Animate game beginning
 
 $("#play_btn").click(()=>{$("#menu").slideToggle()})
-$("#play_btn").click(()=>{$("#game").slideToggle()});
+$("#play_btn").click(()=>{$("#game").slideToggle()})
 
 // Create languages object
 
