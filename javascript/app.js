@@ -101,7 +101,16 @@ for(let i = 0; i < 2; i++) {
 // Randomly choosing winning answer and giving its values to image and button
 
 for (let i = 0; i < 4; i++) {
-    document.getElementsByClassName("opt")[i].addEventListener("click", () => {document.getElementsByClassName("opt")[i].style.backgroundColor = "red";document.getElementById(languageChosen.lname).style.backgroundColor = 'green';disableBtns();setTimeout(() => {$('#game').slideToggle()}, 1750);congratulate('l')})
+    document.getElementsByClassName("opt")[i].addEventListener(
+        "click",
+        () => {
+            document.getElementsByClassName("opt")[i].style.backgroundColor = "red";
+            document.getElementById(languageChosen.lname).style.backgroundColor = 'green';
+            disableBtns();
+            setTimeout(() => {$('#game').slideToggle()}, 1750);
+            congratulate('l')
+        }
+    )
 }   
 
 function disableBtns() {
@@ -114,7 +123,13 @@ let winningBtn = document.getElementsByClassName("opt")[Math.floor(Math.random()
 winningBtn.innerHTML = languageChosen.lname; // will give button right value
 winningBtn.setAttribute('id', languageChosen.lname);
 
-document.getElementById(languageChosen.lname).addEventListener('click', () => {document.getElementById(languageChosen.lname).style.backgroundColor = 'green';congratulate('w')});
+document.getElementById(languageChosen.lname).addEventListener(
+    'click',
+    () => {
+        document.getElementById(languageChosen.lname).style.backgroundColor = 'green';
+        congratulate('w')
+    }
+);
 
 function congratulate(status) {
     switch(status) {
@@ -129,5 +144,3 @@ function congratulate(status) {
         break;
     }
 }
-
-// fuck you doe
