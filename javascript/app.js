@@ -85,17 +85,8 @@ for(let i = 0; i < 2; i++) {
     languages = languages.filter((item) => {return item !== languages[index]});
     button.setAttribute('class', 'opt'); // same class
     button.append(document.createTextNode(language)); // for html purposes
-    document.getElementById("divOne").append(button);
-};
-
-for(let i = 0; i < 2; i++) {
-    let button = document.createElement("button");
-    let index = Math.floor(Math.random() * languages.length)
-    let language = languages[index].lname;
-    languages = languages.filter((item) => {return item !== languages[index]});
-    button.setAttribute('class', 'opt'); // same class
-    button.append(document.createTextNode(language)); // for html purposes
-    document.getElementById("divTwo").append(button);
+    if (i < 2) {document.getElementById("divOne").append(button);} else {document.getElementById("divTwo").append(button);}
+    
 };
 
 // Randomly choosing winning answer and giving its values to image and button
