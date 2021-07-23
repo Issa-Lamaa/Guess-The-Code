@@ -76,8 +76,8 @@ let languages = [
 
 let languageChosen = languages[Math.floor(Math.random() * languages.length)];
 languages = languages.filter((item) => {return item !== languageChosen})
-console.log(languages)
 document.getElementById("code").src = languageChosen.src;
+
 for(let i = 0; i < 4; i++) {
     let button = document.createElement("button");
     let index = Math.floor(Math.random() * languages.length)
@@ -104,11 +104,15 @@ for (let i = 0; i < 4; i++) {
     )
 }   
 
+// Disable buttons until the timout ends
+
 function disableBtns() {
     for (let i = 0; i < 4; i++) {
     document.getElementsByClassName("opt")[i].disabled = true;
     }
 }
+
+// Change random button's innerHTML to the right answer
 
 let winningBtn = document.getElementsByClassName("opt")[Math.floor(Math.random() * 4)]
 winningBtn.innerHTML = languageChosen.lname; // will give button right value
@@ -121,6 +125,9 @@ document.getElementById(languageChosen.lname).addEventListener(
         congratulate('w')
     }
 );
+
+
+// Message at the end of the game
 
 function congratulate(status) {
     switch(status) {
