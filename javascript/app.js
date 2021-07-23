@@ -78,7 +78,7 @@ let languageChosen = languages[Math.floor(Math.random() * languages.length)];
 languages = languages.filter((item) => {return item !== languageChosen})
 console.log(languages)
 document.getElementById("code").src = languageChosen.src;
-for(let i = 0; i < 2; i++) {
+for(let i = 0; i < 4; i++) {
     let button = document.createElement("button");
     let index = Math.floor(Math.random() * languages.length)
     let language = languages[index].lname;
